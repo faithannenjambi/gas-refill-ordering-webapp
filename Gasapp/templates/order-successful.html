@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+ 
+{%load static%}
+
+{%block content%}
+
+<div class="container">
+    <h1 class="center">Congratulations</h1>
+    <p class="center text">Your order was successful, and delivery is underway!</p>
+    <a href="{% url 'home' %}" class="btn">
+        Back to home
+    </a>
+</div>
+{%endblock%}

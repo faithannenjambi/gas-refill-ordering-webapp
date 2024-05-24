@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+ 
+{%load static%}
+
+{%block content%}
+
+<div class="container">
+    <h1 class="center sub-heading">Hurray! <br /> Your message delivered</h1>
+    
+    <a href="{% url 'about' %}" class="btn">
+        Go back
+    </a>
+</div>
+{%endblock%}

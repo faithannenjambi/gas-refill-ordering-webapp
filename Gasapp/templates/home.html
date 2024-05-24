@@ -1,0 +1,218 @@
+{%extends 'base.html'%}
+
+{%load static%}
+
+{%block content%}
+
+ <!-- Hero Section -->
+
+ <div class="mainwork box">
+  <h2 class="heading white">Best <span class="orange">refined gas</span> for your <span class="burgundy">daily needs</span></h2>
+  <p class="text white big">
+    Powering Possibilities: Your Trusted Source for Gas Solutions
+  </p>
+</div>
+
+<!-- CTA -->
+
+<section class="box">
+  <div id="main-left">
+    <h2 class="heading"><span class="burgundy">Reliability</span> & <span class="orange">Convenience</span></h2>
+    <p class="text spacing">
+      Welcome to G5 Gas Services: Where Reliability Meets Convenience!
+       Discover seamless solution for all your energy needs.
+    </p>
+    <a href="{% url 'order' %}">
+      <button class="btn">Order Now</button>
+    </a>
+  </div>
+
+  <div id="main-right">
+    <img src="{%static 'assets/Cooking-Gas-Cylinders.png'%}" width="100%" />
+  </div>
+</section>
+
+<div class="shape">
+  <svg
+    data-name="Layer 1"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1200 120"
+    preserveAspectRatio="none"
+  >
+    <path
+      d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+      opacity=".25"
+      class="shape-fill"
+    ></path>
+    <path
+      d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+      opacity=".5"
+      class="shape-fill"
+    ></path>
+    <path
+      d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+      class="shape-fill"
+    ></path>
+  </svg>
+</div>
+
+<!-- Why trust us -->
+<div class="box">
+  <h2 class="heading center">Why <span class="orange">trust</span> us?</h2>
+  <div id="why-us-container">
+    <div class="reason">
+      <div class="icon-container">
+        <img src="{%static 'assets/fuel-icon.png'%}" alt="" />
+      </div>
+
+      <div class="icon-text">
+        <p class="sub-heading">Clean Fuel</p>
+        <p class="text">
+          We understand the critical importance of clean fuel in today's world. With our unwavering commitment to enviromental sustainability, we pledge to provide you with the highest quality clean fuel options. 
+          Trust us to fuel your journey towards a greener future.
+        </p>
+      </div>
+    </div>
+    <div class="reason">
+      <div class="icon-container">
+        <img src="{%static 'assets/hasslefree-icon.png'%}" alt="" />
+      </div>
+
+      <div class="icon-text">
+        <p class="sub-heading">Hassle Free</p>
+        <p class="text">
+          Say goodbye to complications with our streamlined processes and user-friendly services. Our dedicated team is committed to simplifying your experience every step of the way, ensuring effortless access to the gas solutions you need. Experience convenience like never before with our hassle-free approach tailored to meet your every requirement.
+        </p>
+      </div>
+    </div>
+    <div class="reason">
+      <div class="icon-container">
+        <img src="{%static 'assets/weight-icon.png'%}" alt="" />
+      </div>
+
+      <div class="icon-text">
+        <p class="sub-heading">Perfect Weight</p>
+        <p class="text">
+          We ensure precise measurements, delivering gas with the perfect weight for your needs. Our state-of-the-art equipment and meticulous attention to detail guarantee accuracy in every delivery, ensuring that you receive precisely what you require, every time. Trust in our commitment to precision and reliability, and experience the satisfaction of having your gas needs met with unparalleled accuracy.
+        </p>
+      </div>
+    </div>
+    <div class="reason">
+      <div class="icon-container">
+        <img src="{%static 'assets/safety-icon.png'%}" alt="" />
+      </div>
+
+      <div class="icon-text">
+        <p class="sub-heading">Maximum Safety</p>
+        <p class="text">
+          Your safety is our priority. Rest assured, our stringent safety measures guarantee peace of mind. From industry-leading protocols to continuous staff training, we leave no stone unturned in ensuring the highest standards of safety for you and your loved ones. With our unwavering dedication to safety, you can confidently rely on us for all your gas requirements, knowing that your well-being is our utmost concern.
+        </p>
+      </div>
+    </div>
+    <div class="reason">
+      <div class="icon-container">
+        <img src="{%static 'assets/supply-icon.png'%}" alt="" />
+      </div>
+
+      <div class="icon-text">
+        <p class="sub-heading">Uninterrupted Supply</p>
+        <p class="text">
+          Never worry about running out. Enjoy a continuous and reliable gas supply. Our robust infrastructure and strategic distribution network ensure that your gas needs are always met, without interruption or delay. Whether it's for your home, business, or industrial facility, count on us to keep the supply flowing seamlessly, so you can focus on what matters most to you.
+        </p>
+      </div>
+    </div>
+    <div class="reason">
+      <div class="icon-container">
+        <img src="{%static 'assets/utility-icon.png'%}" alt="" />
+      </div>
+
+      <div class="icon-text">
+        <p class="sub-heading">Optimum Utility</p>
+        <p class="text">
+          Make the most out of every drop with our gas solutions tailored for maximum efficiency. Our team of experts works tirelessly to optimize every aspect of our gas services, from delivery schedules to equipment maintenance, to ensure that you get the most value out of every unit of gas consumed. With our efficient and sustainable solutions, you can minimize waste and maximize.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Testimonial -->
+
+<div class="testimonial">
+  <h2 class="heading center">What our <span class="burgundy">clients</span> says</h2>
+  <div class="testimonial-content">
+    <p class="text">
+      "This is the best product I've ever used! It lasted longer than usual.
+      Thank you so much!"
+    </p>
+    <p class="testimonial-author">- Amanda Ebruke</p>
+  </div>
+</div>
+
+<!-- How we Operate -->
+
+<div class="box">
+  <h2 class="heading center">How we <span class="orange">operate</span></h2>
+  <p class="text center">Get your cooking gas refilled hassle-free with just a few clicks!
+     Convenient online ordering, swift delivery to your doorstep.</p>
+  <div class="container">
+    <div class="mini-container">
+      <img class="order_img" src="{%static 'assets/order.png'%}" alt="" />
+
+      <h2 class="sub-heading">Step 1</h2>
+      <p class="text">Select your preferred product.</p>
+    </div>
+
+    <div class="mini-container">
+      <img class="order_img" src="{%static 'assets/money.png'%}" alt="" />
+      <h2 class="sub-heading">Step 2</h2>
+      <p class="text">Place and pay for your order securely online.</p>
+    </div>
+
+    <div class="mini-container">
+      <img class="order_img" src="{%static 'assets/delivery-truck.png'%}" alt="" />
+      <h2 class="sub-heading">Step 3</h2>
+      <p class="text">Your gas is delivered to your door step.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Operating Hours -->
+
+<!-- <section class="box"> -->
+
+  <div class="operating-time-container">
+
+    <div class="operating-time">
+      <div><h2 class="sub-heading">Business Operating Hours</h2></div>
+      
+      <div class="row">
+        <p>OPEN:</p>
+        <p class="text">MONDAY - SATURDAY</p>
+      </div>
+
+      <div class="row">
+        <p>HOURS:</p>
+        <p class="text">8am - 5pm</p>
+      </div>
+
+      <div><h2 class="sub-heading">Where We Operate</h2></div>
+
+      <div class="areas">
+        
+        <p>CBD</p>
+        <p>District A</p>
+        <p>District B</p>
+        <p>District C</p>
+      </div>
+      
+    </div>
+
+    <div class="location-image">
+      <img src="{%static 'assets/abuja.webp'%}" width="100%" height="300px"/>
+    </div>
+
+  </div>
+
+
+{%endblock%}

@@ -1,0 +1,93 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>G5 Gas Services</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{%static 'css/home.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/about.css'%}" />
+    <link rel="stylesheet" href="{%static 'css/order.css'%}" />
+
+   
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        outline: none;
+        text-decoration: none;
+        font-family: "Open Sans", sans-serif;
+        list-style: none;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="nav-container">
+      
+        <a id="logo" href="{%url 'home'%}">
+          <img src="{% static 'assets/logo.svg'%}" alt="" height="50px"/>
+        </a>
+  
+        <div id="navigations">
+          <a href="{%url 'home'%}">Home</a>
+          <a href="{%url 'about'%}">Contact</a>
+          <a href="{%url 'order'%}">
+            <button class="btn">Order Now</button>
+          </a>
+        </div>
+  
+        <button id="mobile">
+          <img src="{%static 'assets/menu.png'%}" class="" />
+        </button>
+  
+        <div id="mobile-menu" class="mobile-menu hide-mobile-menu">
+          <a href="{%url 'home'%}">Home</a>
+          <a href="{%url 'about'%}">Contact</a>
+          <a href="{%url 'order'%}">
+            <button class="btn">Order Now</button>
+          </a>
+        </div>
+    </div>
+
+    {%block content%}
+
+    {%endblock%}
+
+    <footer>
+        <p id="copyright">copyright &copy 2024</p>
+        <ul class="socialicons">
+          <li>
+            <a href="#">
+              <img src="{% static 'assets/facebook.png'%}" class="icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{%static 'assets/twitter.png'%}" class="icon" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="{%static 'assets/instagram.png'%}" class="icon" />
+            </a>
+          </li>
+        </ul>
+    </footer>
+
+    <script  src="{%static 'js/home.js'%}"></script>
+    <script  src="{%static 'js/order.js'%}"></script>
+
+  </body>
+  </html>

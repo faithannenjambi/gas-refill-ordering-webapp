@@ -1,0 +1,120 @@
+{%extends 'base.html'%}
+ 
+{%load static%}
+
+{%block content%}
+
+<div id="order-page">
+  <div id="header" class="box">
+    <h1 class="heading">GAS REFILL</h1>
+    <p class="center">How To Order</p>
+  </div>
+
+  <!--How to order--> 
+
+    <div class="steps box">
+      <div class="step">
+        <div class="step-number">1</div>
+        <p class="text">
+          Use the dropdown menu to select the size of your cylinder.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <p class="text">
+          Enter the number of cylinders you want, and see the exact computed price displayed.
+          </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <p class="text">
+          Fill in your details.
+
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <p class="text">
+          Click on the button "Order now" to make your payment
+          securely
+        </p>
+        <p class="text red">
+          Please note that you are to pay "Total Amount Payable" inclusive
+          of tax and delivery fees
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <p class="text">
+          Within 5 minutes you will receive a confirmation call from one of
+          our official numbers <span>01122334455</span> or
+          <span>0712345678</span> <br />
+          and further instructions on delivery.
+        </p>
+      </div>
+    </div>
+  
+
+  <!--Gas Prices-->
+
+  <!--Ordering section-->
+
+  <div class="box">
+    <form method="post" id="my-form" class="my-form">
+      {% csrf_token %}
+      <div class="flex gap">
+        <div class="equal">
+          <p class="text">Choose cylinder size</p>
+
+          <select name="cylinder-size" id="cylinder-size" required>
+            <option value=" "></option>
+            <option value="5">5 KG</option>
+            <option value="12">12 KG</option>
+            <option value="25">25 KG</option>
+            <option value="50">50 KG</option>
+          </select>
+        </div>
+
+        <div class="equal">
+          <p class="text">Quantity</p>
+          <input type="number" name="quantity" required id="quantity" />
+        </div>
+      </div>
+      <div>
+        <p class="text">Full Name</p>
+        <input type="text" name="full-name" id="full-name" required />
+      </div>
+      <div>
+        <p class="text">Phone Number</p>
+        <input name="phone-number" id="phone-number" required />
+      </div>
+      <div>
+        <p class="text">Address</p>
+        <textarea name="address" id="address" rows="5" required></textarea>
+      </div>
+
+      <div class="receipt">
+        <div class="grid">
+          <p class="text">Gas refill amount:</p>
+          <p id="gas-refill-amt" class="value"></p>
+        </div>
+        <div class="grid">
+          <p class="text">Standard Delivery fee:</p>
+          <p id="delivery-fee" class="value"></p>
+        </div>
+        <hr class="space" />
+        <div class="grid">
+          <p class="text">Total Amount Payable:</p>
+          <input name="total-amount"  id="total-amount" class="total" readonly />
+        </div>
+      </div>
+
+      <button type="submit" id="my-btn">Order now</button>
+    </form>
+  </div>
+</div>
+{%endblock%}

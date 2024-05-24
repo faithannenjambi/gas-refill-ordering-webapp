@@ -1,0 +1,62 @@
+{%extends 'base.html'%}
+
+{%load static%}
+
+{%block content%}
+
+
+<div id="header" class="box">
+  <h1 class="heading">CONTACT US</h1>
+  <p class="center">We'd love to hear from you</p>
+</div>
+
+<div class="box">
+ 
+
+  <div class="details">
+    <div class="detail">
+      <img src="{%static 'assets/call-icon.png'%}" alt="call-icon" />
+      <p class="sub-heading">Customer Support Lines</p>
+      <p class="text phone">0712345678 & 01122334455</p>
+    </div>
+
+    <div class="detail">
+      <img src="{%static 'assets/mail-icon.png'%}" alt="" />
+      <p class="sub-heading">Email</p>
+      <p class="text">order@group5gas.com</p>
+    </div>
+
+    <div class="detail">
+      <img src="{%static 'assets/location-icon.png'%}" alt="" />
+      <p class="sub-heading">Locate Us</p>
+      <p class="text">01 ABC Street</p>
+    </div>
+  </div>
+</div>
+
+<div class="box">
+  <h3 class="sub-heading center">REACH US DIRECTLY</h3>
+  <div class="style-form">
+    <form method="post">
+      {% csrf_token %}
+      <div>
+        <p class="text">Full Name</p>
+        <input id="name" name="full-name" required />
+      </div>
+      <div>
+        <p class="text">Email Address</p>
+        <input type="email" id="email" name="email" />
+      </div>
+      <div>
+        <p class="text">Message</p>
+        <textarea type="text" id="message" name="message" rows="8" required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+  
+
+</div>
+
+{%endblock%}
